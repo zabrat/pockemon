@@ -8,4 +8,11 @@ body{
     background: url('https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png') no-repeat;
     background-position: center;
     background-size: 100%;
+    background-attachment: fixed;
+}
+
+.root__main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

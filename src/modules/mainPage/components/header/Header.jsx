@@ -25,7 +25,7 @@ const Header = (props) => {
                 <li 
                     className='header__pockemons'
                     onClick={props.openPockemonsPage}
-                    children='Pockemons'
+                    children='Pokemons'
                 />
             </ul>
             <div className='header__search'>
