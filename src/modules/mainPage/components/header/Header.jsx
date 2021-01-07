@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import './header.css';
 import pokeBall from '../../../../theme/images/Pokeball.svg';
+import { getPockByName } from '../../../../rest/REST.js'
+
+
+const pop = () => {
+    getPockByName()
+}
 
 const Header = (props) => {
     const logoURL = 'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg';
-
+    const onGetAllPoks = useCallback(() => getPockByName(), [getPockByName])
     return (
         <div className='root__header'>
             <img 
@@ -24,7 +30,7 @@ const Header = (props) => {
                 />
                 <li 
                     className='header__pockemons'
-                    onClick={props.openPockemonsPage}
+                    onClick={onGetAllPoks}
                     children='Pokemons'
                 />
             </ul>

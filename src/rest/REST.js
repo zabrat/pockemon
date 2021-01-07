@@ -1,8 +1,8 @@
-const URL = 'https://pokeapi.co/api/v2/';
+const URL = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200';
 
-const getPockByName = (pockName) => {
-    const resp = fetch(URL + 'pokemon/' + pockname);
-    const respData = resp.json();
-
-    return respData;
+export const getPockByName = () => {
+    fetch(URL)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error', error));
 }
