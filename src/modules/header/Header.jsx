@@ -6,7 +6,6 @@ import logoURL from '../../theme/images/imagesUrl.js';
 import { getSomePoks } from '../../rest/REST.js'
 
 const Header = (props) => {
-    
     const onGetSomePoks = useCallback(() => getSomePoks(), [getSomePoks])
     return (
         <div className='root__header'>

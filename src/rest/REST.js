@@ -1,35 +1,30 @@
 const mainURL = 'https://pokeapi.co/api/v2/';
 
-export const getSomePoks = () => {
+export const getSomePoks = async() => {
     const limit = 30;
     const offset = 0;
-
     const pokemonsData = [];
 
-    return fetch(`${mainURL}pokemon?limit=${limit}&offset=${offset}`)
-            .then(response => response.json())
-            .then(data => {
-                data.results.forEach(element => {
-                    fetch(element.url)
-                        .then(response => response.json())
-                        .then(data => {
-                            const pokemonData = {};
-                            pokemonData.id = data.id;
-                            pokemonData.name = data.name;
-                            pokemonData.type = data.types[0].type.name;
-                            pokemonData.height = data.height;
-                            pokemonData.img = data.sprites.other['official-artwork']['front_default'];
-                            // pokemonData.img = data.sprites.other.dream_world.front_default;
-                            pokemonData.weight = data.weight;
-                            pokemonData.isOpen = true;
+    const pokemonsListResp = await fetch(`${mainURL}pokemon?limit=${limit}&offset=${offset}`);
+    const pokemonsListData = await pokemonsListResp.json();
 
-                            console.log(pokemonData)
-                            // pokemonsData.push(pokemonData);
-                        })
-                        .catch(error => console.error('Error', error));
-                });
-                // console.log(pokemonsData);
-            })
-            .catch(error => console.error('Error', error));
+    for(let element of pokemonsListData.results){
+        const pokemonResp = await fetch(element.url);
+        const pokemonData = await pokemonResp.json();
 
+        const pokemonDataObj = {};
+
+        pokemonDataObj.id = pokemonData.id;
+        pokemonDataObj.name = pokemonData.name;
+        pokemonDataObj.type = pokemonData.types[0].type.name;
+        pokemonDataObj.height = pokemonData.height;
+        pokemonDataObj.img = pokemonData.sprites.other['official-artwork']['front_default'];
+        pokemonDataObj.weight = pokemonData.weight;
+        pokemonDataObj.isOpen = true;
+
+        pokemonsData.push(pokemonDataObj);
+}
+
+    return pokemonsData; 
+    //localStorage.setItem('pokemonsData', JSON.stringify({pokemonsData}));
 }

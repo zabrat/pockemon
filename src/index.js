@@ -6,10 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import rootReducer from './roots/rootReducer/rootReducer';
 import { Provider } from 'react-redux';
+import { getSomePoks } from '../src/rest/REST.js'
 
 
 function init() {
-    const store = createStore(rootReducer)
+    if(localStorage.getItem('pokemonsData') != true){
+        getSomePoks().then(data => localStorage.setItem('pokemonsData', JSON.stringify(data)))
+    }
+    const store = createStore(rootReducer);
     window.store = store;
 
     ReactDOM.render(
