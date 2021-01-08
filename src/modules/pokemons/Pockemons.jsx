@@ -4,7 +4,7 @@ import Card from './components/card/Card.jsx'
 const Pockemons = () => {
     return (
         <div className='main-container__cards-container'>
-            <Card/>
+            Pokemons
         </div>
     )
 }

@@ -1,15 +1,31 @@
 import React from 'react';
-import Header from './components/header/Header.jsx'
-import Home from '../home/Home.jsx'
-import './mainPageStyle.css'
+import Header from '../header/Header.jsx';
+import Home from '../home/Home.jsx';
+import AboutUs from '../aboutUs/AboutUs.jsx';
+import Pokemons from '../pokemons/Pockemons.jsx'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+
+import './mainPageStyle.css';
 
 const MainPage = () => {
     return(
         <>
-            <Header/>
-            <div className='root__main-container'>
-                <Home/>
-            </div>
+            <Router>
+                <Header/>
+                <div className='root__main-container'>
+                        <Switch>
+                            <Route exact path='/'>
+                                <Home/>
+                            </Route>
+                            <Route path='/about-us'>
+                                <AboutUs/>
+                            </Route>
+                            <Route path='/pokemons'>
+                                <Pokemons/>
+                            </Route>
+                        </Switch> 
+                </div>
+            </Router>
         </>
     )
 }

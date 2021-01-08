@@ -21,6 +21,11 @@
     list-style: none;
     cursor: pointer;
     font-size: 25px;
+    
+}
+.header__pages-container li a{
+    color:white;
+    text-decoration: none;
 }
 
 .header__search{
