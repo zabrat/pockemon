@@ -2,19 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import rootReducer from './roots/rootReducer/rootReducer';
 import { Provider } from 'react-redux';
-import { getSomePoks } from '../src/rest/REST.js'
+import { onSaveDataToLS } from './utlis/localStorage'
 
 
 function init() {
-    if(localStorage.getItem('pokemonsData') != true){
-        getSomePoks().then(data => localStorage.setItem('pokemonsData', JSON.stringify(data)))
-    }
     const store = createStore(rootReducer);
     window.store = store;
+    onSaveDataToLS(store).then(() => console.log('DATA HASE BEEN SAVE IN LOCALSTORAGE'));
 
     ReactDOM.render(
         <Provider store={store}>
@@ -25,8 +22,3 @@ function init() {
 }
 
 init();
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

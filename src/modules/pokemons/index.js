@@ -4,11 +4,11 @@ import * as selectors from './selectors';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-    // pokemonsData: selectors.getPokemonsData(state),
+    pokemonsData: selectors.getPokemonsData(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-    savePokemons: pokemonsData => dispatch(actions.onSavePokemons(pokemonsData)),
+    savePokemons: payload => dispatch(actions.onSavePokemons(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);
