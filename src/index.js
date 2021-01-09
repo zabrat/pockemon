@@ -11,8 +11,12 @@ import { onSaveDataToLS } from './utlis/localStorage'
 function init() {
     const store = createStore(rootReducer);
     window.store = store;
-    onSaveDataToLS(store);
+    onSaveDataToLS(store).then(() => {
+        reactDomRender(store)
+    });
+}
 
+function reactDomRender(store) {
     ReactDOM.render(
         <Provider store={store}>
             <App />

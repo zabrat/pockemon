@@ -1,18 +1,25 @@
-import React from 'react';
+import React,{ useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Card from './components/card/Card.jsx';
 import './pokemonsStyle.css'
 
 const Pokemons = props => {
-    const {
-        savePokemons,
-        pokemonsData,
-    } = props;
+    const { pokemonsData } = props;
+    const [pokemons, setPokemons] = useState([]);
 
+    useEffect(() => {
+        console.log('did Mount')
+        pokemonsData.length && setPokemons(pokemonsData);
+        return () => {
+            setPokemons([])
+        }
+    }, [pokemonsData])
+    
+    console.log('pock',pokemonsData)
     return (
         <div className='main-container__cards-container'>
-            {pokemonsData.length ?
-                pokemonsData.map(element =>
+            {pokemons.length ?
+                pokemons.map(element =>
                 <Card
                     key={element.id}
                     img={element.img}
@@ -28,8 +35,7 @@ const Pokemons = props => {
 }
 
 Pokemons.propTypes = {
-    savePokemons: PropTypes.func.isRequired,
-    pokemonsData: PropTypes.array.isRequired,
+    
 }
 
 export default React.memo(Pokemons);

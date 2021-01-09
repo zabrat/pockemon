@@ -1,7 +1,7 @@
 import constants from '../../constants/constants.js';
 
 const initialState = {
-    pokemonsData: null
+    pokemonsData: []
 }
 
 export default (state = initialState, action) => {

@@ -1,19 +1,18 @@
 import { getSomePoks } from '../rest/REST';
 import constants from '../constants/constants';
 
-export function onSaveDataToLS(store) {
-    const pokemonsData = localStorage.getItem('pokemonsData');
+export async function onSaveDataToLS(store) {
+    const pokemonsData = JSON.parse(localStorage.getItem('pokemonsData')) || [];
 
     if(!pokemonsData.length){
-        getSomePoks().then(payload => {
+        await getSomePoks().then(payload => {
             localStorage.setItem('pokemonsData', JSON.stringify(payload));
+            console.log('DATA HASE BEEN SAVE IN LOCALSTORAGE');
         })
     }
 
-    store.dispatch({
+    await store.dispatch({
         type: constants.SAVE_POKEMONS,
-        payload: JSON.parse(pokemonsData),
+        payload: pokemonsData,
     });
-
-    console.log('DATA HASE BEEN SAVE IN LOCALSTORAGE');
 }
