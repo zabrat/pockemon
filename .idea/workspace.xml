@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cebd625-33b6-4075-aaca-a2dbd00c3618" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utlis/localStorage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/mainPage/MainPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/mainPage/MainPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/pokemons/Pokemons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pokemons/Pokemons.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pokemons/components/card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pokemons/components/card/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pokemons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pokemons/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pokemons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pokemons/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utlis/localStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utlis/localStorage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610128640063</updated>
-      <workItem from="1610128642139" duration="2674000" />
+      <workItem from="1610128642139" duration="3227000" />
+      <workItem from="1610175483330" duration="1415000" />
     </task>
     <servers />
   </component>

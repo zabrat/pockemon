@@ -1,32 +1,25 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import './mainPageStyle.css';
 import Header from '../header/Header.jsx';
 import Home from '../home/Home.jsx';
 import AboutUs from '../aboutUs/AboutUs.jsx';
-import Pokemons from '../pokemons/'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-
-import './mainPageStyle.css';
+const Pokemons = React.lazy(() => import('../pokemons'));
 
 const MainPage = () => {
     return(
-        <>
-            <Router>
-                <Header/>
-                <div className='root__main-container'>
-                        <Switch>
-                            <Route exact path='/'>
-                                <Home/>
-                            </Route>
-                            <Route path='/about-us'>
-                                <AboutUs/>
-                            </Route>
-                            <Route path='/pokemons'>
-                                <Pokemons/>
-                            </Route>
-                        </Switch> 
-                </div>
-            </Router>
-        </>
+        <Router>
+            <Header/>
+            <div className='root__main-container'>
+                <Suspense fallback={<div>Download...</div>}>
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route path='/about-us' component={AboutUs} />
+                        <Route path='/pokemons' component={Pokemons} />
+                    </Switch>
+                </Suspense>
+            </div>
+        </Router>
     )
 }
 

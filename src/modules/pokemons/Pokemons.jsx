@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from './components/card/Card.jsx';
 import './pokemonsStyle.css'
 
@@ -24,6 +25,11 @@ const Pokemons = props => {
             ): null}
         </div>
     )
+}
+
+Pokemons.propTypes = {
+    savePokemons: PropTypes.func.isRequired,
+    pokemonsData: PropTypes.array.isRequired,
 }
 
 export default React.memo(Pokemons);

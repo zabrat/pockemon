@@ -11,7 +11,7 @@ import { onSaveDataToLS } from './utlis/localStorage'
 function init() {
     const store = createStore(rootReducer);
     window.store = store;
-    onSaveDataToLS(store).then(() => console.log('DATA HASE BEEN SAVE IN LOCALSTORAGE'));
+    onSaveDataToLS(store);
 
     ReactDOM.render(
         <Provider store={store}>
