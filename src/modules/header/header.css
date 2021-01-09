@@ -21,30 +21,10 @@
     list-style: none;
     cursor: pointer;
     font-size: 25px;
-    
+    margin: 100px;
 }
+
 .header__pages-container li a{
     color:white;
     text-decoration: none;
-}
-
-.header__search{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search__input{
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-}
-
-.search__button{
-    height: 100px;
-    width: 100px;
-    margin-left:-50px;
-    cursor: pointer;
 }

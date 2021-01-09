@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import pokemonsReducer from '../../manager/pockemons/reducer.js'
+import pokemonsPage from '../../manager/pockemons/reducer.js'
+import homePage from '../../manager/home/reducer.js'
 
 export default combineReducers({
-    pokemonsReducer
+    pokemonsPage, homePage
 });

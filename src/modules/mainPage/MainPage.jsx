@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../header/Header.jsx';
-import Home from '../home/Home.jsx';
+import Home from '../home';
 import AboutUs from '../aboutUs/AboutUs.jsx';
 import Pokemons from '../pokemons/'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';

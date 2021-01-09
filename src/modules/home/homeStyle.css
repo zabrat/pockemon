@@ -1,7 +1,28 @@
-.main-container__home-container{
+.home-container__pokemon-container{
     margin: 50px;
     min-height: calc(100vh-75px);
     min-width: 1000px;
     background: white;
     border-radius: 10px;   
+}
+
+.header__search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__input{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.search__button{
+    height: 100px;
+    width: 100px;
+    margin-left:-50px;
+    cursor: pointer;
 }

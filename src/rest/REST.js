@@ -26,5 +26,11 @@ export const getSomePoks = async() => {
 }
 
     return pokemonsData; 
-    //localStorage.setItem('pokemonsData', JSON.stringify({pokemonsData}));
+}
+
+export const getPokDataByName = async(name) => {
+    const pokemonResp = await fetch(`${mainURL}pokemon/${name}`);
+    const pokemonData = await pokemonResp.json();
+
+    return pokemonData;
 }

@@ -9,6 +9,7 @@ const Pokemons = props => {
     savePokemons(JSON.parse(localStorage.getItem('pokemonsData')));
 
     // console.log(pokemonsData);
+    
     const data = JSON.parse(localStorage.getItem('pokemonsData'));
     return (
         <div className='main-container__cards-container'>
