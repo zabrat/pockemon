@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'pokoFont';
+    src: url('../../theme/fonts/Pokemon\ Solid.ttf');
+  }
+
+.home-container__pokemon-window{
+    margin: 50px;
+    height: auto;
+    width: 1000px;
+    background: white;
+    border-radius: 10px;  
+    position: relative;
+    display: flex;
+}
+
+.pokemon-window__close-button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+
+.pokemon-info__pokemon-name{
+    font-family: 'pokoFont';
+    color: rgb(255, 196, 0);
+    -webkit-text-stroke: rgb(34, 0, 185) 3px;
+    font-size: 50px;
+}

@@ -1,0 +1,1 @@
+export const getPokemonData = state => state.homePage.pokemonData;

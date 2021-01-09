@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './homeStyle.css'
 import pokeBall from '../../theme/images/Pokeball.svg';
 import { getPokDataByName } from '../../rest/REST.js'
+import PokemonWindow from '../pokemonWindow'
 
 const Home = props => {
     const [pokemonName, setPokemonName] = useState(null);
     const [pokemonData, setPokemonData] = useState(null);
+    const { isSubmit } = props;
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -42,6 +44,7 @@ const Home = props => {
                         className='search__button'
                     />
                 </form>
+                {isSubmit && <PokemonWindow/>}
             </div>   
     )
 }

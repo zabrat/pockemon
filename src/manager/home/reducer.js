@@ -15,6 +15,13 @@ export default (state = initialState, action) => {
                 pokemonData: action.payload.data,
                 isSubmit: true
             }
+        case constants.CLOSE_WINDOW:
+            return {
+                ...state,
+                pokemonName: null,
+                pokemonData: null,
+                isSubmit: false
+            }
         default:
             return state;
     }
