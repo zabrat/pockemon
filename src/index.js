@@ -10,7 +10,7 @@ import { getSomePoks } from '../src/rest/REST.js'
 
 
 function init() {
-    if(localStorage.getItem('pokemonsData') != true){
+    if(!localStorage.getItem('pokemonsData')){
         getSomePoks().then(data => localStorage.setItem('pokemonsData', JSON.stringify(data)))
     }
     const store = createStore(rootReducer);
