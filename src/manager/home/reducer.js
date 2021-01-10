@@ -3,7 +3,7 @@ import constants from '../../constants/constants.js';
 const initialState = {
     pokemonName: null,
     pokemonData: null,
-    description: null,
+    pokemonChars: null,
     isSubmit: false
 }
 
@@ -14,6 +14,7 @@ export default (state = initialState, action) => {
                 ...state,
                 pokemonName: action.payload.name,
                 pokemonData: action.payload.data,
+                pokemonChars:action.payload.chars,
                 isSubmit: true
             }
         case constants.CLOSE_WINDOW:
@@ -21,7 +22,7 @@ export default (state = initialState, action) => {
                 ...state,
                 pokemonName: null,
                 pokemonData: null,
-                description: null,
+                pokemonChars: null,
                 isSubmit: false
             }
         case constants.SAVE_POK_CHARS:

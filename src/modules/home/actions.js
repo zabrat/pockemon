@@ -1,10 +1,11 @@
 import constants from '../../constants/constants.js'
 
-export const onSaveCurrentPok = (pokemonName, pokemonData) => ({
+export const onSaveCurrentPok = (pokemonName, pokemonData, pokemonChars) => ({
     type: constants.SAVE_CURRENT_POK,
     payload: {
         name : pokemonName,
-        data: pokemonData
+        data: pokemonData,
+        chars: pokemonChars
     }
 })
 

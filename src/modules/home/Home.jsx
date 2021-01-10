@@ -13,21 +13,15 @@ const Home = props => {
         saveCurrentPok
     } = props;
 
-    useEffect(() => {
-        // Update the document title using the browser API
-        document.title = `You clicked ${count} times`;
-      });
-    
-
     const handleSubmit = event => {
         event.preventDefault();
 
         getPokDataByName(pokemonName)
         .then(pokemonData => {
             getPokCharById(pokemonData.id)
-            .then(result => savePokChars(result));
+            .then(result => saveCurrentPok(pokemonName, pokemonData, result));
+
             setPokemonData(pokemonData);
-            saveCurrentPok(pokemonName, pokemonData);
         })
     }
 
