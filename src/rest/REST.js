@@ -36,18 +36,23 @@ export const getPokDataByName = async(name) => {
 }
 
 export const getPokCharById = async(id) => {
-    const pokCharResp = await fetch(`${mainURL}characteristic/${id}`);
-    const pokCharData = await pokCharResp.json();
-    
     const pokCharacteristics = {};
+    try{
+        const pokCharResp = await fetch(`${mainURL}characteristic/${id}`);
+        const pokCharData = await pokCharResp.json();
 
-    pokCharData.descriptions.forEach(element => {
-        if(element.language.name === 'en'){
-            pokCharacteristics.description = element.description;
-        } 
-    })
+        pokCharData.descriptions.forEach(element => {
+            if(element.language.name === 'en'){
+                pokCharacteristics.description = element.description;
+            } 
+        })
 
-    pokCharacteristics.highest_stat = pokCharData.highest_stat.name;
+        pokCharacteristics.highest_stat = pokCharData.highest_stat.name;
+    } catch {
+        pokCharacteristics.description = 'Respect his master-Zaur'
+        pokCharacteristics.highest_stat = 'loyalty'
+    }
+
 
     return pokCharacteristics;
 }

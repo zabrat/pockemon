@@ -8,7 +8,6 @@ const PokemonWindow = props => {
         pokemonChars
     } = props;
 
-    console.log(pokemonChars)
     const handleClick = () => {
         closeWindow();
     }
