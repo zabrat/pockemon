@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
     pokemonData: selectors.getPokemonData(state),
+    pokemonChars: selectors.getPokemonChars(state),
 });
 
 const mapDispatchToProps = dispatch => ({

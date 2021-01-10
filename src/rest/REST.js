@@ -34,3 +34,20 @@ export const getPokDataByName = async(name) => {
 
     return pokemonData;
 }
+
+export const getPokCharById = async(id) => {
+    const pokCharResp = await fetch(`${mainURL}characteristic/${id}`);
+    const pokCharData = await pokCharResp.json();
+    
+    const pokCharacteristics = {};
+
+    pokCharData.descriptions.forEach(element => {
+        if(element.language.name === 'en'){
+            pokCharacteristics.description = element.description;
+        } 
+    })
+
+    pokCharacteristics.highest_stat = pokCharData.highest_stat.name;
+
+    return pokCharacteristics;
+}

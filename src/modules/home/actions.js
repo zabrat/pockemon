@@ -8,3 +8,8 @@ export const onSaveCurrentPok = (pokemonName, pokemonData) => ({
     }
 })
 
+export const onSavePokChars = chars => ({
+    type: constants.SAVE_POK_CHARS,
+    payload: chars
+})
+

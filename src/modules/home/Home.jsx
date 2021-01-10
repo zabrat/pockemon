@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
 import './homeStyle.css'
 import pokeBall from '../../theme/images/Pokeball.svg';
-import { getPokDataByName } from '../../rest/REST.js'
+import { getPokDataByName, getPokCharById } from '../../rest/REST.js'
 import PokemonWindow from '../pokemonWindow'
 
 const Home = props => {
     const [pokemonName, setPokemonName] = useState(null);
     const [pokemonData, setPokemonData] = useState(null);
-    const { isSubmit } = props;
+    const { 
+        isSubmit,
+        savePokChars,
+        saveCurrentPok
+    } = props;
+
+    useEffect(() => {
+        // Update the document title using the browser API
+        document.title = `You clicked ${count} times`;
+      });
+    
 
     const handleSubmit = event => {
         event.preventDefault();
-        const { saveCurrentPok } = props;
 
         getPokDataByName(pokemonName)
         .then(pokemonData => {
+            getPokCharById(pokemonData.id)
+            .then(result => savePokChars(result));
             setPokemonData(pokemonData);
-            saveCurrentPok(pokemonName, pokemonData)
+            saveCurrentPok(pokemonName, pokemonData);
         })
     }
 

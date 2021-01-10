@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import './pokemonWindowStyle.css'
 
 const PokemonWindow = props => {
-    const { pokemonData } = props;
+    const { 
+        pokemonData,
+        closeWindow,
+        pokemonChars
+    } = props;
 
+    console.log(pokemonChars)
     const handleClick = () => {
-        const { closeWindow } = props;
-
         closeWindow();
     }
 
@@ -36,8 +39,14 @@ const PokemonWindow = props => {
                             children={`Weight: ${pokemonData.weight} hectograms`}
                             className='pokemon-info__some-info'
                        />
-                       <li className='pokemon-info__some-info'/>
-                       <li className='pokemon-info__some-info'/>
+                       <li 
+                            children={`Description: ${pokemonChars.description}`}
+                            className='pokemon-info__some-info'
+                       />
+                       <li 
+                            children={`Highest stat: ${pokemonChars.highest_stat}`}
+                            className='pokemon-info__some-info'
+                       />
                        <li className='pokemon-info__some-info'/>
                    </ul>
                </div>

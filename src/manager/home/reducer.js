@@ -3,6 +3,7 @@ import constants from '../../constants/constants.js';
 const initialState = {
     pokemonName: null,
     pokemonData: null,
+    description: null,
     isSubmit: false
 }
 
@@ -20,7 +21,13 @@ export default (state = initialState, action) => {
                 ...state,
                 pokemonName: null,
                 pokemonData: null,
+                description: null,
                 isSubmit: false
+            }
+        case constants.SAVE_POK_CHARS:
+            return {
+                ...state,
+                description: action.payload
             }
         default:
             return state;
