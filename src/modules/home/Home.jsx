@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import './homeStyle.css'
+import React, { useState } from 'react';
 import pokeBall from '../../theme/images/Pokeball.svg';
 import { getPokDataByName, getPokCharById } from '../../rest/REST.js'
 import PokemonWindow from '../pokemonWindow'

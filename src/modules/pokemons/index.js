@@ -1,5 +1,4 @@
 import Component from './Pokemons.jsx';
-import * as actions from './actions';
 import * as selectors from './selectors';
 import { connect } from 'react-redux';
 
