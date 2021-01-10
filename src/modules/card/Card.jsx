@@ -1,9 +1,21 @@
 import React from 'react';
 import './card.css'
 
-const Card = (props) => {
+const Card = props => {
+    const { deleteCard } = props;
+
+    const handleClick = event => {
+        deleteCard(event.target.id);
+    }
+
     return (
         <div className="cards-container__card">
+            <button 
+                id={props.id}
+                children='x'
+                className='card__close-button'
+                onClick={handleClick}
+            />
             <div className='card__img-container'>
                 <img 
                     src={props.img}

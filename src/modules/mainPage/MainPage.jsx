@@ -7,7 +7,11 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import './mainPageStyle.css';
 
-const MainPage = () => {
+const MainPage = props => {
+    const { savePokemons } = props;
+
+    savePokemons(JSON.parse(localStorage.getItem('pokemonsData')));
+
     return(
         <>
             <Router>

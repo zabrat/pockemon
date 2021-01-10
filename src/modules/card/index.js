@@ -1,14 +1,14 @@
-import Component from './Pokemons.jsx';
+import Component from './Card.jsx';
 import * as actions from './actions';
-import * as selectors from './selectors';
+import * as selectors from './selectores';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-    pokemonsData: selectors.getPokemonsData(state),
+
 });
 
 const mapDispatchToProps = dispatch => ({
-    
+    deleteCard: cardId => dispatch(actions.onDeleteCard(cardId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);

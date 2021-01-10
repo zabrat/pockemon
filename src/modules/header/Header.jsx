@@ -2,10 +2,8 @@ import React, {useCallback} from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 import logoURL from '../../theme/images/imagesUrl.js';
-import { getSomePoks } from '../../rest/REST.js'
 
 const Header = (props) => {
-    const onGetSomePoks = useCallback(() => getSomePoks(), [getSomePoks])
     return (
         <div className='root__header'>
             <img 
@@ -15,19 +13,16 @@ const Header = (props) => {
             <ul className='header__pages-container'>
                 <li 
                     className='header__home'
-                    onClick={props.openHomePage} 
                 >
                     <Link to="/">Home</Link>
                 </li>
                 <li 
                     className='header__about-us'
-                    onClick={props.openAboutUsPage}
                 >
                     <Link to="/about-us">About us</Link>
                 </li>
                 <li 
                     className='header__pockemons'
-                    onClick={onGetSomePoks}
                 >
                     <Link to="/pokemons">Pokemons</Link>
                 </li>

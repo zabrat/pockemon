@@ -4,6 +4,16 @@
     background: white;
     margin: 22px;
     border-radius: 10px;
+    position: relative;
+}
+
+.card__close-button{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
 }
 
 .img-container__img{

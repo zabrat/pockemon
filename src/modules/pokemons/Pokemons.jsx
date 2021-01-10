@@ -1,28 +1,28 @@
 import React from 'react';
-import Card from './components/card/Card.jsx';
+import Card from '../card';
 import './pokemonsStyle.css'
 
-const Pokemons = (props, store) => {
+const Pokemons = props => {
     const { 
-        savePokemons     
+        pokemonsData
     } = props;
     
-    savePokemons(JSON.parse(localStorage.getItem('pokemonsData')));
-    
-    const data = store.getState().pokemonsPage.pokemonsData;
     return (
         <div className='main-container__cards-container'>
-            {data.length ? 
-                data.map(element =>
-                <Card
-                    key={element.id}
-                    img={element.img}
-                    name={element.name.toUpperCase()}
-                    type={element.type}
-                    height={element.height}
-                    weight={element.weight}
-                    isOpen={element.isOpen}
-                />
+            {pokemonsData.length ? 
+                pokemonsData.map(element =>
+                element.isOpen ? 
+                    <Card
+                        id={element.id}
+                        key={element.id}
+                        img={element.img}
+                        name={element.name.toUpperCase()}
+                        type={element.type}
+                        height={element.height}
+                        weight={element.weight}
+                        isOpen={element.isOpen}
+                    />
+                : null
             ): null}
         </div>
     )
