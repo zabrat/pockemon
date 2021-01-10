@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 import logoURL from '../../theme/images/imagesUrl.js';
@@ -7,6 +7,7 @@ const Header = (props) => {
     return (
         <div className='root__header'>
             <img 
+                alt={logoURL}
                 src={logoURL}
                 className='header__logo'
             />

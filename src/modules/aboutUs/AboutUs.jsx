@@ -9,7 +9,10 @@ const AboutUs = () => {
                     className='aboutUs-container_text'
                 />
                <div className='aboutUs-container__pokemon-window'>
-                    <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png'/> 
+                    <img 
+                         src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png'
+                         alt='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png'
+                    /> 
                     <div className='pokemon-window__pokemon-info'>
                          <p 
                               children='PSYDUCK'

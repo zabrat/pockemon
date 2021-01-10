@@ -19,6 +19,7 @@ const Card = props => {
             <div className='card__img-container'>
                 <img 
                     src={props.img}
+                    alt={props.img}
                     className="img-container__img"
                 />
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './pokemonWindowStyle.css'
 
 const PokemonWindow = props => {
@@ -19,7 +19,10 @@ const PokemonWindow = props => {
                     onClick={handleClick}
                     className='pokemon-window__close-button'
                 />
-               <img src={pokemonData.sprites.other['official-artwork']['front_default']}/> 
+               <img 
+                    src={pokemonData.sprites.other['official-artwork']['front_default']}
+                    alt={pokemonData.sprites.other['official-artwork']['front_default']}
+               /> 
                <div className='pokemon-window__pokemon-info'>
                    <p 
                         children={pokemonData.name.toUpperCase()}

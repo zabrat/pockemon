@@ -6,22 +6,19 @@ import PokemonWindow from '../pokemonWindow'
 
 const Home = props => {
     const [pokemonName, setPokemonName] = useState(null);
-    const [pokemonData, setPokemonData] = useState(null);
     const { 
         isSubmit,
-        savePokChars,
         saveCurrentPok
     } = props;
 
     const handleSubmit = event => {
         event.preventDefault();
 
+        setPokemonName('');
         getPokDataByName(pokemonName)
         .then(pokemonData => {
             getPokCharById(pokemonData.id)
             .then(pokemonChar => saveCurrentPok(pokemonName, pokemonData, pokemonChar));
-
-            setPokemonData(pokemonData);
         })
         .catch(() => alert("This pokemon isn't exist"))
     }
@@ -41,12 +38,13 @@ const Home = props => {
                     className='header__search'
                 >
                     <input 
-                        // value={pokemonName}
+                        value={pokemonName}
                         onChange={handleChange}
                         className='search__input'
                     />
                     <input 
                         src={pokeBall}
+                        alt={pokeBall}
                         type='image'
                         className='search__button'
                     />
