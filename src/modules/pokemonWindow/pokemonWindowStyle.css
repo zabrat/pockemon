@@ -6,7 +6,7 @@
 .home-container__pokemon-window{
     margin: 50px;
     height: auto;
-    width: 850px;
+    min-width: 850px;
     background: white;
     border-radius: 10px;  
     position: relative;
@@ -15,17 +15,38 @@
 
 .pokemon-window__close-button{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 0px;
+    top: -50px;
     width: 40px;
     height: 40px;
     font-size: 30px;
+    border: none;
+    background: transparent;
+    font-family: 'pokoFont';
+    color: rgb(255, 196, 0);
+    -webkit-text-stroke: rgb(0, 68, 255) 4px;
+    font-size: 40px;
+    letter-spacing: 20px;
 }
 
 .pokemon-info__pokemon-name{
+    margin-top: 10px;
     font-family: 'pokoFont';
     color: rgb(255, 196, 0);
     -webkit-text-stroke: rgb(0, 68, 255) 4px;
     font-size: 50px;
     letter-spacing: 20px;
+}
+
+.pokemon-info__some-info{
+    list-style: none;
+}
+
+.pokemon-info__info{
+    margin-top: 15px;
+    font-family: 'pokoFont';
+    color: rgb(255, 196, 0);
+    -webkit-text-stroke: rgb(0, 68, 255) 1.5px;
+    font-size: 25px;
+    letter-spacing: 5px;
 }

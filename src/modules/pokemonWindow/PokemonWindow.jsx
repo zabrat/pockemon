@@ -28,26 +28,33 @@ const PokemonWindow = props => {
                    />
                    <ul className='pokemon-info__some-info'>
                        <li 
-                            children={`Abilities: ${pokemonData.abilities.map(element => element.ability.name)}`}
-                            className='pokemon-info__some-info'
+                            children={`Abilities: ${pokemonData.abilities.map(element => (' '+element.ability.name))}`}
+                            className='pokemon-info__info'
                        />
                        <li 
                             children={`Height: ${pokemonData.height} decimetres`}
-                            className='pokemon-info__some-info'
+                            className='pokemon-info__info'
                        />
                        <li 
                             children={`Weight: ${pokemonData.weight} hectograms`}
-                            className='pokemon-info__some-info'
+                            className='pokemon-info__info'
                        />
                        <li 
                             children={`Description: ${pokemonChars.description}`}
-                            className='pokemon-info__some-info'
+                            className='pokemon-info__info'
                        />
                        <li 
                             children={`Highest stat: ${pokemonChars.highest_stat}`}
-                            className='pokemon-info__some-info'
+                            className='pokemon-info__info'
                        />
-                       <li className='pokemon-info__some-info'/>
+                       <li 
+                            children={`Type: ${pokemonData.types.map(element => (' '+element.type.name))}`}
+                            className='pokemon-info__info'
+                       />
+                       <li 
+                            children={`Base experience: ${pokemonData.base_experience}`}
+                            className='pokemon-info__info'
+                       />
                    </ul>
                </div>
             </div>   

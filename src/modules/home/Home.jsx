@@ -23,6 +23,7 @@ const Home = props => {
 
             setPokemonData(pokemonData);
         })
+        .catch(() => alert("This pokemon isn't exist"))
     }
 
     const handleChange = event => {
@@ -31,21 +32,22 @@ const Home = props => {
 
     return(
             <div className='main-container__home-container'>
+                <p
+                    children='PokeSearcher'
+                    className='search__search-phrase' 
+                />
                 <form 
                     onSubmit={handleSubmit}
                     className='header__search'
                 >
-                    <span 
-                        children='Find your favorite Pokemon'
-                        className='search__search-phrase' 
-                    />
                     <input 
                         // value={pokemonName}
                         onChange={handleChange}
                         className='search__input'
                     />
-                    <img 
+                    <input 
                         src={pokeBall}
+                        type='image'
                         className='search__button'
                     />
                 </form>
