@@ -19,7 +19,7 @@ const Home = props => {
         getPokDataByName(pokemonName)
         .then(pokemonData => {
             getPokCharById(pokemonData.id)
-            .then(result => saveCurrentPok(pokemonName, pokemonData, result));
+            .then(pokemonChar => saveCurrentPok(pokemonName, pokemonData, pokemonChar));
 
             setPokemonData(pokemonData);
         })

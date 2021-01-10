@@ -53,6 +53,5 @@ export const getPokCharById = async(id) => {
         pokCharacteristics.highest_stat = 'loyalty'
     }
 
-
     return pokCharacteristics;
 }
