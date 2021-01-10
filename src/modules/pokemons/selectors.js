@@ -1,1 +1,1 @@
-export const getPokemonsData = state => state.pokemonsReducer.pokemonsData;
+export const getPokemonsData = state => state.pokemonsPage.pokemonsData;

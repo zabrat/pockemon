@@ -2,15 +2,14 @@ import React from 'react';
 import Card from './components/card/Card.jsx';
 import './pokemonsStyle.css'
 
-const Pokemons = props => {
+const Pokemons = (props, store) => {
     const { 
         savePokemons     
     } = props;
-    savePokemons(JSON.parse(localStorage.getItem('pokemonsData')));
-
-    // console.log(pokemonsData);
     
-    const data = JSON.parse(localStorage.getItem('pokemonsData'));
+    savePokemons(JSON.parse(localStorage.getItem('pokemonsData')));
+    
+    const data = store.getState().pokemonsPage.pokemonsData;
     return (
         <div className='main-container__cards-container'>
             {data.length ? 
