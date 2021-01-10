@@ -25,11 +25,18 @@ const Card = props => {
             <div className="card__info-container">
                 <p className='info-container__name' children={props.name}/>
                 <ul className='info-container__pok-info'>
-                    <li className='pok-info__type' children={props.type}/>
-                    <li className='pok-info__height' children={props.height}/>
-                    <li className='pok-info__weight' children={props.weight}/>
-                    <li className='pok-info__name' children={props.id}/>
-                    <li className='pok-info__name' children={props.isOpen}/>
+                    <li 
+                        className='pok-info__type' 
+                        children={`Type: ${props.type}`}
+                    />
+                    {/* <li 
+                        children={`Height: ${props.height} decimetres`}
+                        className='pok-info__height'
+                    />
+                    <li 
+                        children={`Weight: ${props.weight} hectograms`}
+                        className='pok-info__weight'
+                    /> */}
                 </ul>
             </div>
         </div>

@@ -28,3 +28,7 @@
     color:white;
     text-decoration: none;
 }
+
+.header__pages-container li a:hover{
+    color: rgb(255, 196, 0);
+}

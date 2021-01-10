@@ -6,8 +6,8 @@
 body{
     height: 100vh;
     background: url('https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png') no-repeat;
-    background-position: center;
-    background-size: 100%;
+    background-position: center center;
+    background-size: cover;
     background-attachment: fixed;
 }
 
