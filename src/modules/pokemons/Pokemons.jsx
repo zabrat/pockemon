@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../card';
-import './pokemonsStyle.css'
+import './pokemonsStyles.scss'
 
 const Pokemons = props => {
     const { 

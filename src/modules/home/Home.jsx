@@ -1,4 +1,4 @@
-import './homeStyle.css'
+import './homeStyle.scss'
 import React, { useState } from 'react';
 import pokeBall from '../../theme/images/Pokeball.svg';
 import { getPokDataByName, getPokCharById } from '../../rest/REST.js'

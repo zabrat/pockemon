@@ -5,7 +5,7 @@ import AboutUs from '../aboutUs/AboutUs.jsx';
 import Pokemons from '../pokemons'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import './mainPageStyle.css';
+import './mainPageStyle.scss';
 
 const MainPage = props => {
     const { savePokemons } = props;

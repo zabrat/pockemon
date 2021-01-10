@@ -1,5 +1,5 @@
 import React from 'react';
-import './pokemonWindowStyle.css'
+import './pokemonWindowStyle.scss'
 
 const PokemonWindow = props => {
     const { 
