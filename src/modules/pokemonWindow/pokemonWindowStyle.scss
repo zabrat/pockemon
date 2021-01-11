@@ -2,9 +2,9 @@
 @import '../../App.scss';
 
 .home-container__pokemon-window{
-    margin: 50px;
     height: auto;
     min-width: 850px;
+    margin: 50px;
     background: white;
     border-radius: 10px;  
     position: relative;
@@ -13,11 +13,11 @@
 }
 
 .pokemon-window__close-button{
+    width: 40px;
+    height: 40px;
     position: absolute;
     right: 0px;
     top: -50px;
-    width: 40px;
-    height: 40px;
     font-size: 30px;
     outline: none;
     cursor: pointer;
