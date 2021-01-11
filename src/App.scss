@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'pokoFont';
+    src: url('../src/theme/fonts/Pokemon\ Solid.ttf');
+}
+
+@mixin poke-font($fontSize, $spacing, $stroke){
+    font-family: 'pokoFont';
+    color: rgb(255, 196, 0);
+    -webkit-text-stroke: rgb(0, 68, 255) $stroke;
+    font-size: $fontSize;
+    letter-spacing: $spacing;
+}

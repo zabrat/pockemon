@@ -5,7 +5,7 @@ const AboutUs = () => {
     return(
             <div className='main-container__aboutUs-container'>
                 <p 
-                    children='My name Zaur and my favorite pokemon is PSYDUCK and who is your favorite pokemon?'
+                    children='My name is Zaur and my favorite pokemon is PSYDUCk. Who is your favorite pokemon?'
                     className='aboutUs-container_text'
                 />
                <div className='aboutUs-container__pokemon-window'>

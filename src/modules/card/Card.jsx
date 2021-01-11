@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './card.scss'
 
 const Card = props => {
@@ -9,39 +10,40 @@ const Card = props => {
     }
 
     return (
-        <div className="cards-container__card">
-            <button 
+        <div className={`cards-container__card ${props.type}`}>
+            <button
                 id={props.id}
                 children='x'
                 className='card__close-button'
                 onClick={handleClick}
             />
             <div className='card__img-container'>
-                <img 
+                <img
                     src={props.img}
                     alt={props.img}
-                    className="img-container__img"
+                    className='img-container__img'
                 />
             </div>
-            <div className="card__info-container">
-                <p className='info-container__name' children={props.name}/>
+            <div className='card__info-container'>
+                <p 
+                    className='info-container__name' 
+                    children={props.name} 
+                />
                 <ul className='info-container__pok-info'>
-                    <li 
-                        className='pok-info__type' 
+                    <li
+                        className='pok-info__type'
                         children={`Type: ${props.type}`}
                     />
-                    {/* <li 
-                        children={`Height: ${props.height} decimetres`}
-                        className='pok-info__height'
-                    />
-                    <li 
-                        children={`Weight: ${props.weight} hectograms`}
-                        className='pok-info__weight'
-                    /> */}
                 </ul>
             </div>
         </div>
     )
 }
+
+Card.propTypes = {
+    img: PropTypes.string,
+    name: PropTypes.string,
+    type: PropTypes.string
+};
 
 export default React.memo(Card);

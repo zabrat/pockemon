@@ -18,9 +18,6 @@ const Pokemons = props => {
                         img={element.img}
                         name={element.name.toUpperCase()}
                         type={element.type}
-                        height={element.height}
-                        weight={element.weight}
-                        isOpen={element.isOpen}
                     />
                 : null
             ): null}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './header.scss';
 import logoURL from '../../theme/images/imagesUrl.js';
 
-const Header = (props) => {
+const Header = () => {
     return (
         <div className='root__header'>
             <img 
@@ -15,17 +15,17 @@ const Header = (props) => {
                 <li 
                     className='header__home'
                 >
-                    <Link to="/">Home</Link>
+                    <Link to='/'>Home</Link>
                 </li>
                 <li 
                     className='header__about-us'
                 >
-                    <Link to="/about-us">About us</Link>
+                    <Link to='/about-us'>About us</Link>
                 </li>
                 <li 
                     className='header__pockemons'
                 >
-                    <Link to="/pokemons">Pokemons</Link>
+                    <Link to='/pokemons'>Pokemons</Link>
                 </li>
             </ul>   
         </div>

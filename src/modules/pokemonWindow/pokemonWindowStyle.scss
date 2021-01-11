@@ -1,7 +1,5 @@
-@font-face {
-    font-family: 'pokoFont';
-    src: url('../../theme/fonts/Pokemon\ Solid.ttf');
-}
+
+@import '../../App.scss';
 
 .home-container__pokemon-window{
     margin: 50px;
@@ -11,6 +9,7 @@
     border-radius: 10px;  
     position: relative;
     display: flex;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .pokemon-window__close-button{
@@ -24,20 +23,12 @@
     cursor: pointer;
     border: none;
     background: transparent;
-    font-family: 'pokoFont';
-    color: rgb(255, 196, 0);
-    -webkit-text-stroke: rgb(0, 68, 255) 4px;
-    font-size: 40px;
-    letter-spacing: 20px;
+    @include poke-font(40px, 0px, 4px);
 }
 
 .pokemon-info__pokemon-name{
     margin-top: 10px;
-    font-family: 'pokoFont';
-    color: rgb(255, 196, 0);
-    -webkit-text-stroke: rgb(0, 68, 255) 4px;
-    font-size: 50px;
-    letter-spacing: 20px;
+    @include poke-font(50px, 15px, 4px);
 }
 
 .pokemon-info__some-info{
@@ -46,9 +37,5 @@
 
 .pokemon-info__info{
     margin-top: 15px;
-    font-family: 'pokoFont';
-    color: rgb(255, 196, 0);
-    -webkit-text-stroke: rgb(0, 68, 255) 1.5px;
-    font-size: 25px;
-    letter-spacing: 5px;
+    @include poke-font(25px, 4px, 1.5px);
 }

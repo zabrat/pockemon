@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .cards-container__card{
     height: 300px;
     width: 200px;
@@ -5,6 +7,39 @@
     margin: 22px;
     border-radius: 10px;
     position: relative;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.normal{
+    background: #9b7390;
+}
+
+.fire{
+    background: #b22222;
+}
+
+.grass{
+    background: #8ecc42;
+}
+
+.water{
+    background: #1c8bf3;
+}
+
+.bug{
+    background: #2f632e;
+}
+
+.poison{
+    background: rgb(179, 0, 179);
+}
+
+.electric{
+    background:yellow;
+}
+
+.ground{
+    background: #855723;
 }
 
 .card__close-button{
@@ -33,12 +68,7 @@
 
 .info-container__name{
     text-align: center;
-    font-family: 'pokoFont';
-    color: rgb(255, 196, 0);
-    -webkit-text-stroke: rgb(0, 68, 255) 1px;
-    font-size: 20px;
-    letter-spacing: 7px;
-    font-weight: bolder;
+    @include poke-font(20px, 7px, 1px);
 }
 
 .info-container__pok-info{
@@ -47,10 +77,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'pokoFont';
-    color: rgb(255, 196, 0);
-    -webkit-text-stroke: rgb(0, 68, 255) 1px;
-    font-size: 20px;
-    letter-spacing: 4px;
-    font-weight: bolder;
+    @include poke-font(20px, 4px, 1px);
 }
