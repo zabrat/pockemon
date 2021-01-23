@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+
+@font-face {
+  font-family: 'pokoFont';
+  src: url(theme/fonts/5d60be1f7ff5fcc21fc1b54c4acec124.ttf); }
+
+.root__header {
+  height: 75px;
+  background: #3f3f3f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px; }
+
+.header__logo {
+  height: 75px;
+  margin-left: 30px; }
+
+.header__pages-container {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  font-size: 25px;
+  margin: 100px; }
+
+.header__pages-container li a {
+  color: white;
+  text-decoration: none; }
+
+.header__pages-container li a:hover {
+  color: #ffc400; }
+
+.main-container__cards-container {
+  display: flex;
+  flex-wrap: wrap; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  height: 100vh;
+  background: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.root__main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
