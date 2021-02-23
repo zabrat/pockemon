@@ -1,6 +1,5 @@
 import constants from '../../constants/constants.js'
 
-export const onSavePokemons = pokemonsData => ({
+export const onSavePokemons = () => ({
     type: constants.SAVE_POKEMONS,
-    payload: pokemonsData
 })

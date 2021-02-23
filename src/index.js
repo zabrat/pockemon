@@ -2,18 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
-import { createStore } from 'redux';
-import rootReducer from './roots/rootReducer/rootReducer';
+import { createStore, applyMiddleware } from 'redux';
+import rootReducer from './roots/rootReducer';
 import { Provider } from 'react-redux';
-import { getSomePoks } from '../src/rest/REST.js'
-
+import { watchRootSaga } from './roots/rootSaga';
+import createSagaMiddleware from 'redux-saga';
+import logger from 'redux-logger';
 
 function init() {
-    if(!localStorage.getItem('pokemonsData')){
-        getSomePoks().then(data => localStorage.setItem('pokemonsData', JSON.stringify(data)))
-    }
-    const store = createStore(rootReducer);
+    const sagaMiddleware = createSagaMiddleware();
+    const store = createStore(rootReducer, applyMiddleware(logger, sagaMiddleware));
     window.store = store;
+
+    sagaMiddleware.run(watchRootSaga);
 
     ReactDOM.render(
         <Provider store={store}>

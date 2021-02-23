@@ -2,11 +2,12 @@ import React from 'react';
 import Card from '../card';
 import './pokemonsStyles.scss'
 
+
 const Pokemons = props => {
     const { 
         pokemonsData
     } = props;
-    
+
     return (
         <div className='main-container__cards-container'>
             {pokemonsData.length ? 

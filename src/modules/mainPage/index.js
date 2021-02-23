@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    savePokemons: pokemonsData => dispatch(actions.onSavePokemons(pokemonsData)),
+    savePokemons: () => dispatch(actions.onSavePokemons()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);

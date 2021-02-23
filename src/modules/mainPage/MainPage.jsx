@@ -4,14 +4,14 @@ import Home from '../home';
 import AboutUs from '../aboutUs/AboutUs.jsx';
 import Pokemons from '../pokemons'
 import { Route, Switch, HashRouter as Router } from 'react-router-dom';
+import { getSomePoks } from '../../rest/REST';
 
 import './mainPageStyle.scss';
 
 const MainPage = props => {
     const { savePokemons } = props;
 
-    savePokemons(JSON.parse(localStorage.getItem('pokemonsData')));
-
+    savePokemons();
     return(
         <>
             <Router>

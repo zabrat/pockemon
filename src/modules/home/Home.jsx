@@ -38,7 +38,6 @@ const Home = props => {
                     className='header__search'
                 >
                     <input 
-                        value={pokemonName}
                         onChange={handleChange}
                         className='search__input'
                     />

@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case constants.SAVE_POKEMONS:
+        case constants.SET_POKEMONS:
             return {
                 ...state,
                 pokemonsData: action.payload,
