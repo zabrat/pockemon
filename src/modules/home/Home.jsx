@@ -1,26 +1,20 @@
 import './homeStyle.scss'
 import React, { useState } from 'react';
 import pokeBall from '../../theme/images/Pokeball.svg';
-import { getPokDataByName, getPokCharById } from '../../rest/REST.js'
 import PokemonWindow from '../pokemonWindow'
 
 const Home = props => {
     const [pokemonName, setPokemonName] = useState(null);
     const { 
         isSubmit,
-        saveCurrentPok
+        setCurrentPok,
     } = props;
 
     const handleSubmit = event => {
         event.preventDefault();
 
         setPokemonName('');
-        getPokDataByName(pokemonName)
-        .then(pokemonData => {
-            getPokCharById(pokemonData.id)
-            .then(pokemonChar => saveCurrentPok(pokemonName, pokemonData, pokemonChar));
-        })
-        .catch(() => alert("This pokemon isn't exist"))
+        setCurrentPok(pokemonName);
     }
 
     const handleChange = event => {

@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    saveCurrentPok: (pokemonName, pokemonData, pokemonChars) => dispatch(actions.onSaveCurrentPok(pokemonName, pokemonData, pokemonChars)),
+    setCurrentPok: (pokemonName) => dispatch(actions.onSetCurrentPok(pokemonName)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);
