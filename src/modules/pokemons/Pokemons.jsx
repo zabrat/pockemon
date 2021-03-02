@@ -2,7 +2,6 @@ import React from 'react';
 import Card from '../card';
 import './pokemonsStyles.scss'
 
-
 const Pokemons = props => {
     const { 
         pokemonsData

@@ -1,8 +1,9 @@
 import { all, call } from 'redux-saga/effects';
 import { watchPokemons } from '../manager/pockemons/saga.js';
+import { watchHome } from '../manager/home/saga.js';
 
 const sagaList = [
-    watchPokemons
+    watchPokemons, watchHome
 ];
 
 export function* watchRootSaga() {

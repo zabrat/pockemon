@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../header/Header.jsx';
 import Home from '../home';
 import AboutUs from '../aboutUs/AboutUs.jsx';
 import Pokemons from '../pokemons'
 import { Route, Switch, HashRouter as Router } from 'react-router-dom';
-import { getSomePoks } from '../../rest/REST';
-
 import './mainPageStyle.scss';
 
 const MainPage = props => {
     const { savePokemons } = props;
+    
+    useEffect(()=>{
+        savePokemons()
+    }, []);
 
-    savePokemons();
     return(
         <>
             <Router>
